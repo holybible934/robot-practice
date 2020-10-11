@@ -14,17 +14,21 @@ Suite Teardown  Close all browsers
 
 
 *** Test Cases ***
-Use Chrome then search MONSTER HUNTER WORLD in Twitch
+Search MONSTER HUNTER WORLD in Twitch Landing Page
     [Tags]    DEBUG
     [Documentation]     Search MONSTER HUNTER WORLD videos in Twitch Landing Page
     [Setup]     go to page      LandingPage
-    Title Should Be     ${CURRENT PAGE TITLE}
     Maximize Browser Window
     Click Search Button
     Input Game Title    ${GAME TITLE}
     Send ENTER after Input
-    Wait Until Search Result Page is Loaded
-#    Title Should Be     Twitch 搜尋 - MONSTER HUNTER WORLD
-#    Go to All Videos List
 
-    [Teardown]    Close Browser
+
+Go to Watch All Videos List Page from Search Result Page
+    [Tags]    DEBUG
+    [Documentation]     Go to Watch All Videos List Page from Search Result Page
+    [Setup]     go to page      SearchResultPage
+#    Title Should Be     ${CURRENT PAGE TITLE}
+    the current page should be      SearchResultPage
+    Click Watch All Videos List
+
