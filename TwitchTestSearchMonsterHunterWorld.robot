@@ -11,8 +11,3 @@ Launch Chrome to Twitch
     Click Search Button
     Input Game Title    ${GAME TITLE}
     Send ENTER after Input
-
-
-*** Keywords ***
-Provided precondition
-    Setup system under test
