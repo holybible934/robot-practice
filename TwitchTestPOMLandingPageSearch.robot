@@ -37,3 +37,9 @@ Find The 1st MONSTER HUNTER WORLD Video of Specified Uploader then click it
     [Setup]     go to page      AllVideosListPage
     the current page should be      AllVideosListPage
     Scroll Down To The First Video      ${UPLOADER}
+
+Watch Gameplay 5 seconds and Capture Screenshot
+    [Tags]    DEBUG
+    [Documentation]     Watch Gameplay 5 seconds and Capture Screenshot
+    [Setup]     go to page      VideoPage
+    Find Cancel Mute Button
