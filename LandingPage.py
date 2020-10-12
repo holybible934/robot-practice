@@ -14,8 +14,4 @@ class LandingPage(PageObject):
         self.selib.click_element(self.locator.search_button)
 
     def input_game_title(self, game_title):
-        self.selib.input_text(self.locator.search_input, game_title)
-
-    def send_enter_after_input(self):
-        with self._wait_for_page_refresh():
-            self.selib.press_keys(self, '\ue007')
+        self.selib.input_text(self.locator.search_input, game_title + '\n')
