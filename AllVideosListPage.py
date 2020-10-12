@@ -20,14 +20,12 @@ class AllVideosListPage(PageObject):
         return True
 
     def scroll_down_to_the_first_video(self, uploader):
-        screen_scroll_count = 0
-        videos_list = self.selib.find_element(self.locator.videos_list)
         videos = self.selib.find_elements(self.locator.videos)
-        for i in range(0, 10):
+        for i in range(5):
             if len(videos) > 0:
-                for j in range(0, len(videos)):
+                for j in range(len(videos)):
                     print(videos[j].text)
-                self.driver.execute_script('arguments[0].scrollIntoView();', videos_list)
+                print('-------------------')
+                self.driver.execute_script('arguments[0].scrollIntoView();', videos[len(videos) - 1])
                 videos = self.selib.find_elements(self.locator.videos)
                 time.sleep(1)
-                screen_scroll_count += 1
