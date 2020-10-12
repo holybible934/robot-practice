@@ -8,7 +8,6 @@ ${UPLOADER}     jeslotwolf
 Documentation    Suite description
 Library     SeleniumLibrary
 Library     PageObjectLibrary
-Resource    TwitchTestResource.robot
 Suite Setup   Open browser  ${MOBILE TWITCH URL}    ${BROWSER}
 Suite Teardown  Close all browsers
 
@@ -22,7 +21,6 @@ Search MONSTER HUNTER WORLD in Twitch Landing Page
     Maximize Browser Window
     Click Search Button
     Input Game Title    ${GAME TITLE}
-    Send ENTER after Input
 
 Go to Watch All Videos List Page from Search Result Page
     [Tags]    DEBUG
